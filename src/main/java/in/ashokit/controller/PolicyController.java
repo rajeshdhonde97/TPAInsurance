@@ -20,10 +20,10 @@ public class PolicyController {
 	@Autowired
 	private PolicyService policyService;
 
-	@PostMapping(value="/savePolicy",consumes = {"application/Json"},produces = "application/xml")
+	@PostMapping(value="/savePolicy",consumes = {"application/Json"},produces = "application/Json")
 	public Policy savePolicyData(@RequestBody Policy policy) {
-		Policy saveInsurancePolicy = policyService.saveInsurancePolicy(policy);
-		return saveInsurancePolicy;
+		Policy saveInsurancePolicy1 = policyService.saveInsurancePolicy(policy);
+		return saveInsurancePolicy1;
 	}
 
 	@GetMapping("/allPolicies")
